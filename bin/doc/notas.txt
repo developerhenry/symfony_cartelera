@@ -1,0 +1,47 @@
+Insertar
+http://173.255.200.97:8009/usuario/insertar
+{
+    "nombre" : "Test 1",
+    "usuario" : "Test 1",
+    "clave" : "123456"
+}
+Listar
+http://173.255.200.97:8009/usuario/listar
+
+Modificar
+http://173.255.200.97:8009/usuario/actualizar/2
+{
+    "nombre" : "Demo 1",
+    "usuario" : "demo 1 ",
+    "clave" : "123456"
+}
+
+Eliminar
+http://173.255.200.97:8009/usuario/eliminar/7
+
+Buscar
+http://173.255.200.97:8009/usuario/buscar?usuario=test_1&clave=123456
+
+Documentacion
+https://www.baeldung.com/guide-to-okhttp
+
+ String json = "{\"nombre\":\"Prueba 1\",\"usuario\":\"prueba1\",\"clave\":\"123456\"}";
+OkHttpClient client = new OkHttpClient();
+
+
+https://trinitytuts.com/get-and-post-request-using-okhttp-in-android-application/
+
+
+EditText txtNombre = findViewById(R.id.editTextNombre);
+        EditText txtUsuario = findViewById(R.id.editTextUsuario);
+        EditText txtclave = findViewById(R.id.editTextClave);
+
+        String nombre = txtNombre.getText().toString();
+        String usuario = txtUsuario.getText().toString();
+        String clave = txtclave.getText().toString();
+
+        // String json = "{\"nombre\":\"Prueba 111\",\"usuario\":\"prueba1\",\"clave\":\"123456\"}";
+      String json = "{\"nombre\": \"" + nombre + "\",\"usuario\":\"" + usuario + "\",\"clave\":\"" + clave + "\"}";
+
+
+
